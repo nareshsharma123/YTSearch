@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.App{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee3;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+}
+.footer{
+    position: absolute;
+    text-align: center;
+    bottom: -3rem;
+    left: 0;
+    width: 100%;
+    padding: 0.7rem;
+    background-color: #111;
+    color: #fff;
+}

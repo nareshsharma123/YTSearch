@@ -1,0 +1,11 @@
+.container{
+    width: 100%;
+    max-width: 950px;
+    margin: 5rem auto;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.footerText{
+    text-align: center;
+}
