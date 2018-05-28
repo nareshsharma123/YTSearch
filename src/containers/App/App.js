@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import styles from './App.module.css';
-import youtube from '../../components/api/youtube';
+import youtube from '../../youtube';
 import VideoList from '../../components/VideoList/VideoList';
 import VideoDetail from '../../components/VideoDetail/VideoDetail';
 
