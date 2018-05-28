@@ -14,11 +14,11 @@ To acquire the said api Key navigate to https://console.developers.google.com/ap
 npm install
 
 # In ./src
-touch env.js
+touch config.js
 ```
 
 ```sh
-# In env.js :
+# In config.js :
 const KEY = <your_key_here>
 export default KEY;
 ```
