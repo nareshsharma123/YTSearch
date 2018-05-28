@@ -6,19 +6,25 @@ const parseDescription=(desc)=>{
     return desc.slice(20)+ append;
 }
 const VideoItem = ({ video, onSelected }) =>{
+    const { title, description, channelTitle, thumbnails } = video.snippet;
+
+    let thumbnail = "https://i.stack.imgur.com/WFy1e.jpg";
+    if (thumbnails){
+        thumbnail= thumbnails.medium.url;
+    }
 
     return (
         <div onClick={()=>{onSelected(video)}} 
             className={styles.VideoItem}>
-            <img className={styles.thumbnail} src={video.snippet.thumbnails.medium.url} />
+            <img alt={title} className={styles.thumbnail} src={thumbnail} />
             <div className={styles.data}>
-                <p className={styles.title}>{video.snippet.title}</p>
+                <p className={styles.title}>{title}</p>
                 <div className={styles.metadata}>
                     <p className={styles.channel}>
-                        {video.snippet.channelTitle}
+                        {channelTitle}
                     </p>
                     <p className={styles.description}>
-                        {parseDescription(video.snippet.description)}
+                        {parseDescription(description)}
                     </p>
                 </div>
             </div>
