@@ -5,19 +5,21 @@ import styles from './VideoList.module.css';
 const VideoList = ({ videos, onSelected, searchTerm }) =>{
 
     if (!searchTerm) {
-        return <p>Nothing searched for</p>
+        return (<p>Search<p>
+
     }
     const renderList = videos.map(video=>{
         return (
-            <VideoItem key={video.etag} 
-            onSelected={onSelected} video={video} />
-        );
+            <div key={video.id.videoId}>
+                <VideoItem onSelected={onSelected} video={video} />
+            </div>
+        )
     });
     if(!renderList.length){
-	return <p>No videos for the search criteria</p>
+	return <p>Search for a video</p>
     } 
     return (
-        <div id="videolist" className={styles.container}>
+        <div className={styles.container}>
             <p>
                 Video results for: {searchTerm}
             </p>

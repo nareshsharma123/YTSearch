@@ -5,6 +5,7 @@ import youtube from '../../components/api/youtube';
 import VideoList from '../../components/VideoList/VideoList';
 import VideoDetail from '../../components/VideoDetail/VideoDetail';
 
+
 class App extends React.Component{
     state={
         videos:[],
@@ -20,11 +21,10 @@ class App extends React.Component{
         try {
             this.setState({videos: res.data.items, searchTerm: term, error: ''});
             window.scrollTo(0, 0);
-	    window.location.href="#";
-	    window.location.href="#videolist";
         } catch(err){
             this.setState({ error: 'Server error. Maybe the quota for today ended.' })
         }
+	setState(videoSelected: '');
     }
 
     onSelected = (video)=>{
@@ -33,7 +33,6 @@ class App extends React.Component{
     }
 
     render(){
-        const github = "https://github.com/nareshbhusal";
         const { error, selectedVideo, searchTerm, videos } = this.state;
         return (
             <div className={styles.App}>
@@ -49,7 +48,7 @@ class App extends React.Component{
                 <footer className={styles.footer}>
                     <p className={styles.footerText}>
                         Built with YouTube api.
-                        © All rights reserved - <a href={github}>Naresh Bhusal</a>
+                        © All rights reserved - Naresh Bhusal
                     </p>
                 </footer>
             </div>
