@@ -10,7 +10,7 @@ class VideoDetail extends React.Component{
         const videoUrl = `https://www.youtube.com/embed/${this.props.video.id.videoId}`;
         return (
             <div className={styles.container}>
-                <iframe ref={this.iframeRef} className={styles.iframe} src={videoUrl} />
+                <iframe ref={this.iframeRef} className={styles.iframe} src={videoUrl} allowFullScreen={true} />
                 <div className={styles.videoData}>
                     <a className={styles.title} target="_blank" href={`https://youtube.com/watch?v=${this.props.video.id.videoId}`}>
                         {this.props.video.snippet.title}
