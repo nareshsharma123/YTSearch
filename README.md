@@ -2,7 +2,7 @@
 
 ## What is this?
 This is a react application built using YouTube api.
-[Live Demo](https://devwrite.netlify.com/)
+[Live Demo](https://yts.netlify.com/)
 
 ## Usage
 
