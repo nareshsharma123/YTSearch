@@ -50,7 +50,6 @@ class App extends React.Component{
                     onSelected={this.onSelected} 
                     videos={videos} />
                 }
-		//<a href="javascript:window.Metomic('ConsentManager:show')">manage cookies</a>
                 <footer className={styles.footer}>
                     <p className={styles.footerText}>
                         Built with YouTube api.
